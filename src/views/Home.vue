@@ -5,7 +5,11 @@
     <template slot="header">Movies information</template>
 
     <template slot="lead">
-      This page will show all the movies playing today.
+     <input v-model="movieInfo" placeholder="edit me">
+     <br>
+     <button onclick="alert('clicked')">Submit</button>
+          <p>Message is: {{ movieInfo }}</p>
+      
     </template>
 
     <hr class="my-4">
@@ -24,10 +28,23 @@ import axios from "axios";
 
 export default {  
   data() {
-    return {};
+    return {
+      movieInfo:"",
+    };
   },
   mounted() {
-    axios.get("https://www.omdbapi.com/?t=god%2Bfather&y=&plot=short&apikey=2ccc910c")
+    axios.get("https://www.omdbapi.com/?t=the matrix&apikey=2ccc910c")
+    .then(response => {
+      console.log(response.data);
+      this.movieInfo = response.data.Actors;
+    })
   }
 };
+// $("#add-movie").on("click", function(event) {
+//         event.preventDefault();
+//         // This line grabs the input from the textbox
+//         var movie = $("#movie-input").val().trim();
+//       mounted(movie)
+//       });
+
 </script>
