@@ -5,6 +5,7 @@
     <template slot="header">Movies information</template>
 
     <template slot="lead">
+      <ChildComponent : method = "mounted"/>
      <input v-model="movieInfo" placeholder="edit me">
      <br>
      <button onclick="alert('clicked')">Submit</button>
