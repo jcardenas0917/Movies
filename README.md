@@ -1,31 +1,6 @@
-# movies
+This is a Vue self project that access a movie API using Axios.
+When user types the name of a movie the information including a picture will show.
 
-## Project setup
-```
-yarn install
-```
+VUEjs and Axios
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# movies
-# movies
+Use Visual studios and the vue cli to run this application.
